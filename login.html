@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample Landing Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav>
+    <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<header>
+    <div class="hero">
+        <h1>Welcome to Our Website</h1>
+        <p>We provide awesome services.</p>
+        <a href="#services" class="btn">Learn More</a>
+    </div>
+</header>
+
+<section id="about">
+    <div class="content">
+        <h2>About Us</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+</section>
+
+<section id="services">
+    <div class="content">
+        <h2>Our Services</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+</section>
+
+<section id="contact">
+    <div class="content">
+        <h2>Contact Us</h2>
+        <p>Email: info@example.com<br>Phone: 123-456-7890</p>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2024 Sample Company. All rights reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>// Smooth scrolling when clicking on nav links
+document.querySelectorAll('nav a').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+
+        const target = document.querySelector(this.getAttribute('href'));
+        target.scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
